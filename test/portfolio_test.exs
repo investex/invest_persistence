@@ -12,6 +12,11 @@ defmodule PortfolioTest do
       assert {:ok, _} = Portfolio.changeset(portfolio) |> Repo.insert
     end
 
+    test "is invalid without a name", %{portfolio: portfolio} = _ do
+      changeset = %{portfolio | name: nil} |> Portfolio.changeset
+      refute changeset.valid?
+    end
+
     test "is invalid without a currency", %{portfolio: portfolio} = _ do
       changeset = %{portfolio | currency: nil} |> Portfolio.changeset
       refute changeset.valid?

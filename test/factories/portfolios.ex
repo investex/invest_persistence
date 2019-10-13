@@ -4,6 +4,7 @@ defmodule Persistence.Factories.Portfolios do
       def portfolio_factory do
         %Persistence.Portfolio{
           user_id: insert(:user).id,
+          name: Faker.Name.name,
           currency: "CAD",
           value: Faker.Random.Elixir.random_between(0, 1000),
           discounted_value: Faker.Random.Elixir.random_between(0, 1000)

@@ -5,6 +5,7 @@ defmodule Persistence.Repo.Migrations.CreatePortfolios do
     create table(:portfolios) do
       add :global_id, :uuid, null: false, default: fragment("uuid_generate_v4()")
       add :user_id, references(:users), null: false
+      add :name, :string, null: false
       add :currency, :string, null: false
       add :value, :integer, null: false, default: 0
       add :discounted_value, :integer, null: false, default: 0

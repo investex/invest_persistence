@@ -4,6 +4,7 @@ defmodule Persistence.Portfolio do
 
   schema "portfolios" do
     field :global_id, :binary_id
+    field :name, :string
     field :currency, :string
     field :value, :integer
     field :discounted_value, :integer
@@ -15,8 +16,8 @@ defmodule Persistence.Portfolio do
 
   def changeset(portfolio, params \\ %{}) do
     portfolio
-    |> Ecto.Changeset.cast(params, [:currency, :value, :discounted_value, :user_id])
-    |> Ecto.Changeset.validate_required([:currency, :value, :discounted_value, :user_id])
+    |> Ecto.Changeset.cast(params, [:name, :currency, :value, :discounted_value, :user_id])
+    |> Ecto.Changeset.validate_required([:name, :currency, :value, :discounted_value, :user_id])
     |> Ecto.Changeset.assoc_constraint(:user)
   end
 end
