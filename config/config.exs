@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :persistence, Persistence.Repo,
   database: "invest_dev",
