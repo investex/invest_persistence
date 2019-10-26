@@ -26,14 +26,20 @@ defmodule Persistence.MixProject do
     [
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
-      {:ex_machina, "~> 2.3", only: :test},
-      {:faker, "~> 0.13", only: :test}
+      {:ex_machina, "~> 2.3", only: [:test, :dev]},
+      {:faker, "~> 0.13", only: [:test, :dev]}
     ]
   end
 
   # This makes sure your factory and any other modules in test/support are compiled
   # when in the test environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support", "test/factories"]
+  defp elixirc_paths(params) when params in [:dev, :test],
+    do: [
+      "lib",
+      "test/support",
+      "test/factories"
+    ]
+
   defp elixirc_paths(_), do: ["lib"]
 
   defp aliases do
