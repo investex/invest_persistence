@@ -3,11 +3,11 @@ defmodule Persistence.Transaction do
   alias Persistence.{Account, Security}
 
   schema "transactions" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :classification, :string
     field :quantity, :integer
     field :price, :integer
-    field :commission, :integer
+    field :commission, :integer, read_after_writes: true
     field :settlement_date, :date
 
     belongs_to :account, Account

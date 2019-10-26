@@ -3,11 +3,11 @@ defmodule Persistence.Portfolio do
   alias Persistence.User
 
   schema "portfolios" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :name, :string
     field :currency, :string
-    field :value, :integer
-    field :discounted_value, :integer
+    field :value, :integer, read_after_writes: true
+    field :discounted_value, :integer, read_after_writes: true
 
     belongs_to :user, User
 
@@ -17,7 +17,7 @@ defmodule Persistence.Portfolio do
   def changeset(portfolio, params \\ %{}) do
     portfolio
     |> Ecto.Changeset.cast(params, [:name, :currency, :value, :discounted_value, :user_id])
-    |> Ecto.Changeset.validate_required([:name, :currency, :value, :discounted_value, :user_id])
+    |> Ecto.Changeset.validate_required([:name, :currency, :user_id])
     |> Ecto.Changeset.assoc_constraint(:user)
   end
 end

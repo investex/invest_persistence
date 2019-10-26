@@ -3,7 +3,7 @@ defmodule Persistence.AssetCategory do
   alias Persistence.Portfolio
 
   schema "asset_categories" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :name, :string
     field :target_percentage, :decimal
     field :actual_percentage, :decimal

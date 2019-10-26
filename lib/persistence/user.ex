@@ -2,7 +2,7 @@ defmodule Persistence.User do
   use Persistence.Schema
 
   schema "users" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :email, :string
     field :password_hash, :string
 

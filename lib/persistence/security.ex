@@ -2,10 +2,10 @@ defmodule Persistence.Security do
   use Persistence.Schema
 
   schema "securities" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :ticker, :string
     field :currency, :string
-    field :price, :integer
+    field :price, :integer, read_after_writes: true
 
     timestamps()
   end

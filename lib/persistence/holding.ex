@@ -3,10 +3,10 @@ defmodule Persistence.Holding do
   alias Persistence.{Account, Security}
 
   schema "holdings" do
-    field :global_id, :binary_id
+    field :global_id, :binary_id, read_after_writes: true
     field :currency, :string
-    field :quantity, :integer
-    field :value, :integer
+    field :quantity, :integer, read_after_writes: true
+    field :value, :integer, read_after_writes: true
 
     belongs_to :account, Account
     belongs_to :security, Security
