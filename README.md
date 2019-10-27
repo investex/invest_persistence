@@ -10,7 +10,7 @@ by adding `persistence` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:persistence, "~> 0.1.0"}
+    {:invest_persistence, "~> 0.1.0"}
   ]
 end
 ```

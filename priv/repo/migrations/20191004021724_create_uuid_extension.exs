@@ -1,4 +1,4 @@
-defmodule Persistence.Repo.Migrations.CreateUuidExtension do
+defmodule Invest.Persistence.Repo.Migrations.CreateUuidExtension do
   use Ecto.Migration
 
   def up do

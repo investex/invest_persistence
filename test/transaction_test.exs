@@ -1,7 +1,7 @@
 defmodule TransactionTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.Transaction
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.Transaction
 
   describe "validations" do
     setup do

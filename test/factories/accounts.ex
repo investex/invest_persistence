@@ -1,8 +1,8 @@
-defmodule Persistence.Factories.Accounts do
+defmodule Invest.Persistence.Factories.Accounts do
   defmacro __using__(_opts) do
     quote do
       def account_factory do
-        %Persistence.Account{
+        %Invest.Persistence.Account{
           portfolio_id: insert(:portfolio).id,
           designation: Faker.Nato.letter_code_word,
           tax_discount: Faker.Random.Elixir.random_uniform,

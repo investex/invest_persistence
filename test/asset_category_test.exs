@@ -1,7 +1,7 @@
 defmodule AssetCategoryTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.AssetCategory
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.AssetCategory
 
   describe "validations" do
     setup do

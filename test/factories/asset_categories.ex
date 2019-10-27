@@ -1,8 +1,8 @@
-defmodule Persistence.Factories.AssetCategories do
+defmodule Invest.Persistence.Factories.AssetCategories do
   defmacro __using__(_opts) do
     quote do
       def asset_category_factory do
-        %Persistence.AssetCategory{
+        %Invest.Persistence.AssetCategory{
           portfolio_id: insert(:portfolio).id,
           name: Faker.Industry.industry,
           target_percentage: Faker.Random.Elixir.random_uniform,

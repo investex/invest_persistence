@@ -1,4 +1,4 @@
-defmodule Persistence.Repo.Migrations.CreateSecurities do
+defmodule Invest.Persistence.Repo.Migrations.CreateSecurities do
   use Ecto.Migration
 
   def up do

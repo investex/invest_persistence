@@ -1,6 +1,6 @@
-defmodule Persistence.Transaction do
-  use Persistence.Schema
-  alias Persistence.{Account, Security}
+defmodule Invest.Persistence.Transaction do
+  use Invest.Persistence.Schema
+  alias Invest.Persistence.{Account, Security}
 
   schema "transactions" do
     field :global_id, :binary_id, read_after_writes: true

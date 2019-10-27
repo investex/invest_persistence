@@ -1,8 +1,8 @@
-defmodule Persistence.Factories.Portfolios do
+defmodule Invest.Persistence.Factories.Portfolios do
   defmacro __using__(_opts) do
     quote do
       def portfolio_factory do
-        %Persistence.Portfolio{
+        %Invest.Persistence.Portfolio{
           user_id: insert(:user).id,
           name: Faker.Name.name,
           currency: "CAD",

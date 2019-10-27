@@ -1,7 +1,7 @@
 defmodule AccountTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.Account
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.Account
 
   describe "validations" do
     setup do

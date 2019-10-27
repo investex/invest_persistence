@@ -1,4 +1,4 @@
-defmodule Persistence.Repo.Migrations.CreatePortfolios do
+defmodule Invest.Persistence.Repo.Migrations.CreatePortfolios do
   use Ecto.Migration
 
   def up do

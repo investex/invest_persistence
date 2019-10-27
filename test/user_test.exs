@@ -1,7 +1,7 @@
 defmodule UserTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.User
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.User
 
   describe "validations" do
     setup do

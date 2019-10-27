@@ -1,6 +1,6 @@
-defmodule Persistence.Portfolio do
-  use Persistence.Schema
-  alias Persistence.User
+defmodule Invest.Persistence.Portfolio do
+  use Invest.Persistence.Schema
+  alias Invest.Persistence.User
 
   schema "portfolios" do
     field :global_id, :binary_id, read_after_writes: true

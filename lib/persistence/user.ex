@@ -1,5 +1,5 @@
-defmodule Persistence.User do
-  use Persistence.Schema
+defmodule Invest.Persistence.User do
+  use Invest.Persistence.Schema
 
   schema "users" do
     field :global_id, :binary_id, read_after_writes: true

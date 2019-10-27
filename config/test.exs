@@ -1,6 +1,6 @@
 import Config
 
-config :persistence, Persistence.Repo,
+config :invest_persistence, Invest.Persistence.Repo,
   database: "invest_test",
   username: "postgres",
   password: "postgres",

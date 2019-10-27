@@ -1,8 +1,8 @@
-defmodule Persistence.Factories.Holdings do
+defmodule Invest.Persistence.Factories.Holdings do
   defmacro __using__(_opts) do
     quote do
       def holding_factory do
-        %Persistence.Holding{
+        %Invest.Persistence.Holding{
           account_id: insert(:account).id,
           security_id: insert(:security).id,
           currency: "CAD",

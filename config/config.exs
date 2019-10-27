@@ -1,11 +1,11 @@
 import Config
 
-config :persistence, Persistence.Repo,
+config :invest_persistence, Invest.Persistence.Repo,
   database: "invest_dev",
   username: "postgres",
   password: "postgres",
   hostname: "localhost"
 
-config :persistence, ecto_repos: [Persistence.Repo]
+config :invest_persistence, ecto_repos: [Invest.Persistence.Repo]
 
 import_config "#{Mix.env()}.exs"

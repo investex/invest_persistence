@@ -1,8 +1,8 @@
-defmodule Persistence.Repo do
+defmodule Invest.Persistence.Repo do
   import Ecto.Query
-  alias Persistence.Repo
+  alias Invest.Persistence.Repo
   use Ecto.Repo,
-    otp_app: :persistence,
+    otp_app: :invest_persistence,
     adapter: Ecto.Adapters.Postgres
 
   # https://elixirforum.com/t/why-does-repo-get-and-repo-get-by-return-the-resource-or-nil-instead-of-an-ok-or-error-tuple/23089/24

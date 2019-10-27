@@ -1,7 +1,7 @@
 defmodule PortfolioTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.Portfolio
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.Portfolio
 
   describe "validations" do
     setup do
@@ -22,14 +22,14 @@ defmodule PortfolioTest do
       refute changeset.valid?
     end
 
-    test "is invalid without a value", %{portfolio: portfolio} = _ do
+    test "is valid without a value", %{portfolio: portfolio} = _ do
       changeset = %{portfolio | value: nil} |> Portfolio.changeset
-      refute changeset.valid?
+      assert changeset.valid?
     end
 
-    test "is invalid without a discounted value", %{portfolio: portfolio} = _ do
+    test "is valid without a discounted value", %{portfolio: portfolio} = _ do
       changeset = %{portfolio | discounted_value: nil} |> Portfolio.changeset
-      refute changeset.valid?
+      assert changeset.valid?
     end
 
     test "is invalid without a user", %{portfolio: portfolio} = _ do

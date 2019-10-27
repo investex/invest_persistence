@@ -1,7 +1,7 @@
 defmodule SecurityTest do
-  use Persistence.RepoCase
-  import Persistence.Factory
-  alias Persistence.Security
+  use Invest.Persistence.RepoCase
+  import Invest.Persistence.Factory
+  alias Invest.Persistence.Security
 
   describe "validations" do
     setup do
